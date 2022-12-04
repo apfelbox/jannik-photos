@@ -1,0 +1,31 @@
+@use "../../assets/scss/helper/mixins";
+
+.container {
+	display: flex;
+	align-items: stretch;
+	justify-content: space-between;
+	margin-inline: var(--gap);
+}
+
+.image {
+	width: calc(50% - 2rem);
+}
+
+.text_container {
+	width: calc(50% - 2rem);
+}
+
+.text_content {
+	position: sticky;
+	top: var(--gap);
+	font-size: clamp(2rem,.36vw + 1.83rem,2.4rem);
+
+	> * + * {
+		margin-top: 2rem;
+	}
+}
+
+.headline {
+	@include mixins.headline;
+	font-size: clamp(3.2rem, 2.4452rem + 2.0968vw, 5.8rem);
+}

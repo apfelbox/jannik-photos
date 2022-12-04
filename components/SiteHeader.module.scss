@@ -1,0 +1,15 @@
+@use "../assets/scss/helper/mixins";
+
+.container {
+	padding: clamp(24px, 1.9355rem + 1.2903vw, 40px) var(--gap);
+}
+
+.logo {
+	@include mixins.headline;
+	@include mixins.transition(opacity);
+	font-size: 2.4rem;
+
+	@include mixins.on-interaction {
+		opacity: .8;
+	}
+}
